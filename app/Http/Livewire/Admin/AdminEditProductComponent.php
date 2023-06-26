@@ -44,7 +44,7 @@ class AdminEditProductComponent extends Component
         $this->image = $product->image;
         $this->category_id = $product->category_id;
         $this->newimage = $product->newimage;
-        $this->product_id = $product->product_id;
+        $this->product_id = $product->id;
     }
 
     public function generateSlug()
@@ -55,7 +55,6 @@ class AdminEditProductComponent extends Component
     public function updateProduct()
     {
         $product = Product::find($this->product_id);
-        $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
