@@ -13,7 +13,7 @@
 
             <div class="wrap-iten-in-cart">
                 @if(Session::has('success_message'))
-                    <div class="alert alert-message">
+                    <div class="alert alert-success" role="alert">
                         <strong>Success: </strong>{{Session::get('success_message')}}
                     </div>
                 @endif
