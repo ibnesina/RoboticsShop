@@ -28,8 +28,8 @@ class ProductFactory extends Factory
             'SKU' => $this->faker->unique()->numberBetween(100,500),
             'stock_status' => 'instock',
             'quantity' => $this->faker->numberBetween(100, 200),
-            'image' => 'product_' . $this->faker->unique()->numberBetween(1, 10).'.jpg',
-            'category_id' => $this->faker->numberBetween(49,54)
+            'image' => 'product_' . $this->faker->unique()->numberBetween(1, 22).'.jpeg',
+            'category_id' => $this->faker->numberBetween(1,5)
         ];
     }
 }

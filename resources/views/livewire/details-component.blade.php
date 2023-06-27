@@ -18,8 +18,33 @@
                 <li class="item-link"><span>detail</span></li>
             </ul>
         </div>
-        <div class="row">
+        
+        <style>
+            .product-wish{
+                position: absolute;
+                top: 10%;
+                left: 0;
+                z-index: 99;
+                right: 30px;
+                text-align: right;
+                padding-top: 0;
+            }
+            .product-wish .fa{
+                color: #cbcbcb;
+                font-size: 24px;
+            }
 
+            .product-wish .fa:hover{
+                color: #1A2C4D;
+            }
+
+            .fill-heart{
+                color: #1A2C4D !important;
+            }
+
+        </style>
+
+        <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
                 <div class="wrap-product-detail">
                     <div class="detail-media">
@@ -64,9 +89,8 @@
                             <span>Quantity:</span>
                             <div class="quantity-input">
                                 <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*" >
-                                
-                                <a class="btn btn-reduce" href="#"></a>
-                                <a class="btn btn-increase" href="#"></a>
+                                <a class="btn btn-reduce" href="#" wire:click.prevent="decreaseQuantity"></a>
+                                <a class="btn btn-increase" href="#" wire:click.prevent="increaseQuantity"></a>
                             </div>
                         </div>
                         <div class="wrap-butons">

@@ -27,8 +27,39 @@ class AdminEditProductComponent extends Component
     public $newimage;
     public $product_id;
 
+    // public function updated($fields)
+    // {
+    //     $this->validateOnly($fields, [
+    //         'name' => 'required',
+    //         'slug' => 'required|unique:products',
+    //         'short_description' => 'required',
+    //         'description' => 'required',
+    //         'regular_price' => 'required|numeric',
+    //         'sale_price' => 'numeric',
+    //         'SKU' => 'required',
+    //         'stock_status' => 'required',
+    //         'quantity' => 'required|numeric',
+    //         'newimage' => 'required|mimes:jpeg,png,jpg',
+    //         'category_id' => 'required'
+    //     ]);
+    // }
+
     public function mount($product_slug)
     {
+        // $this->validate([
+        //     'name' => 'required',
+        //     'slug' => 'required|unique:products',
+        //     'short_description' => 'required',
+        //     'description' => 'required',
+        //     'regular_price' => 'required|numeric',
+        //     'sale_price' => 'numeric',
+        //     'SKU' => 'required',
+        //     'stock_status' => 'required',
+        //     'quantity' => 'required|numeric',
+        //     'newimage' => 'required|mimes:jpeg,png,jpg',
+        //     'category_id' => 'required'
+        // ]);
+
         $product = Product::where('slug', $product_slug)->first();
 
         $this->name = $product->name;
