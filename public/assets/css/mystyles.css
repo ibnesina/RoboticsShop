@@ -18,7 +18,7 @@
   
   .navbarr li{
     list-style: none;
-    padding: 0 20px;
+    padding: 0 18px;
     position: relative;
     font-size: 12px;
   }
@@ -27,7 +27,7 @@
     text-decoration: none;
     font-weight: 600;
     color: #1a1a1a;
-    font-size: 18px;
+    font-size: 17px;
     transition: 0.3s ease;
   }
   

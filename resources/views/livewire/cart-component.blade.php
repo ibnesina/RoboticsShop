@@ -9,7 +9,7 @@
                 <li class="item-link"><span>Cart</span></li>
             </ul>
         </div>
-        <div class=" main-content-area">
+        <div class="main-content-area">
             @if(Cart::instance('cart')->count() > 0)
 
             <div class="wrap-iten-in-cart">
