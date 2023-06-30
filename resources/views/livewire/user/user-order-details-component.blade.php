@@ -12,7 +12,7 @@
                                 Order Details
                             </div>
                             <div class="col-md-6">
-                                <a href="{{route('user.orders')}}" class="btn btn-success pull-right">My Orders</a>
+                                <a href="{{route('user.orders')}}" class="btn btn-primary pull-right">My Orders</a>
                                 @if($order->status == 'ordered')
                                     <a href="#" class="btn btn-warning pull-right" wire:click.prevent="cancelOrder" style="margin-right: 20px;">Cancel Order</a>
                                 @endif

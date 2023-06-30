@@ -109,6 +109,7 @@ class CheckoutComponent extends Component
         {
             return redirect()->route('login');
         }
+        
         else if($this->thankyou) 
         {  
             return redirect()->route('thankyou');

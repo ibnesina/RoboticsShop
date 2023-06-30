@@ -54,7 +54,7 @@
                                         <td><a href="{{route('admin.orderdetails', ['order_id'=>$order->id])}}" class="btn btn-info btn-sm">Details</a></td>
                                         <td>
                                             <div class="dropdown">
-                                                <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">Status
+                                                <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">Status
                                                     <span class="caret"></span></button>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}}, 'delivered')">Delivered</a></li>

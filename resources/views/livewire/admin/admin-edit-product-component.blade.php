@@ -9,7 +9,7 @@
                                 Edit Product
                             </div>
                             <div class="col-md-6">
-                                <a href="{{route('admin.product')}}" class="btn btn-success pull-right">All Products</a>
+                                <a href="{{route('admin.product')}}" class="btn btn-primary pull-right">All Products</a>
                             </div>
                         </div>
                     </div>

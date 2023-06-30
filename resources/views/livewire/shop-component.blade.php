@@ -157,7 +157,7 @@
 				<div class="widget mercado-widget filter-widget price-filter">
 					<h2 class="widget-title">Price <span class="text-info">৳{{$min_price}} - ৳{{$max_price}}</span></h2>
 					<div class="widget-content" style="padding: 10px 5px 40px 5px;">
-						<div id="slider" wire:ignore>
+						<div  id="slider" wire:ignore>
 
 						</div>
 						
@@ -208,7 +208,7 @@
 	<script>
 		var slider = document.getElementById('slider');
 		noUiSlider.create(slider,{
-			start: [1, 1000],
+			start: [1, 2000],
 			connect: true,
 			range :{
 				'min' : 1,

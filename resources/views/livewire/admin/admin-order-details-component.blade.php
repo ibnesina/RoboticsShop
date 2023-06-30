@@ -9,7 +9,7 @@
                                 Order Details
                             </div>
                             <div class="col-md-6">
-                                <a href="{{route('admin.orders')}}" class="btn btn-success pull-right">All Orders</a>
+                                <a href="{{route('admin.orders')}}" class="btn btn-primary pull-right">All Orders</a>
                             </div>
                         </div>
                     </div>

@@ -86,7 +86,7 @@
 										<i class="fa fa-phone" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Phone</b>
-											<p>0123-465-789-111</p>
+											<p>0123-465-7891</p>
 										</div>
 									</div>
 
