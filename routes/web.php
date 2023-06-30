@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\AboutUsComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
@@ -11,12 +12,15 @@ use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\BlogComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\CompetetionComponent;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\ProjectServiceComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\ThankyouComponent;
@@ -44,7 +48,7 @@ use Laravel\Jetstream\Rules\Role;
 //     return view('welcome');
 // });
 
-Route::get('/', HomeComponent::class);
+Route::get('/', HomeComponent::class)->name('home');
 
 Route::get('/shop', ShopComponent::class)->name('product.shop');
 
@@ -63,6 +67,14 @@ Route::get('/wishlist', WishlistComponent::class)->name('product.wishlist');
 Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
 
 Route::get('/contact-us', ContactComponent::class)->name('contact');
+
+Route::get('/about-us', AboutUsComponent::class)->name('aboutus');
+
+Route::get('/blog', BlogComponent::class)->name('blog');
+
+Route::get('/competetions', CompetetionComponent::class)->name('competetions');
+
+Route::get('/project-service', ProjectServiceComponent::class)->name('projectservice');
 
 // Route::middleware([
 //     'auth:sanctum',

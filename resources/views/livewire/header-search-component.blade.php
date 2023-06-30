@@ -8,9 +8,9 @@
                 <input type="hidden" name="product_cat_id" value="{{$product_cat_id}}" id="product-cate-id">
                 <a href="#" class="link-control">{{str_split($product_cat, 12)[0]}}</a>
                 <ul class="list-cate">
-                    <li class="level-0">All Categories</li>
+                    {{-- <li class="level-0">Categories</li> --}}
                     @foreach ($categories as $category)
-                        <li class="level-1" data-id="{{$category->id}}">{{$category->name}}</li>
+                        <li class="level-0" data-id="{{$category->id}}"><a href="{{route('product.category', ['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a><hr></li>
                     @endforeach
                 </ul>
             </div>

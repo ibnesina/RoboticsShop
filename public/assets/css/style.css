@@ -49,7 +49,6 @@ Primary use:    Ecommerce
 -------------------------------------------------------------------*/
 
 
-
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
@@ -487,8 +486,8 @@ input,textarea{
 	list-style: none;
 	font-size: 13px;
 	color: #666;
-    padding: 3.5px 15px;
-    padding-right: 5px;
+    padding: 3px 10px;
+    /* padding-right: 5px; */
 }
 .center-section .wrap-search-form .wrap-list-cate .list-cate li:not(.level-0){
     font-weight: 300;
@@ -517,11 +516,11 @@ input,textarea{
     overflow-y: auto;
     text-align: left;
     display: none;
-    padding-bottom: 12px;
+    /* padding-bottom: 2px; */
 }
-.center-section .wrap-search-form .wrap-list-cate .list-cate li.level-0{
+/* .center-section .wrap-search-form .wrap-list-cate .list-cate li.level-0{
 
-}
+} */
 .center-section .wrap-search-form .wrap-list-cate .link-control::after {
 	content: '\f0dd';
 	font-family: FontAwesome;
@@ -2189,7 +2188,7 @@ li.menu-item .nav-label.sale-label::before{
     -ms-transform: translateY(8.5px);
 }
 .coppy-right-box {
-    background: #2d2d2d;
+    background: #192D4D;
 }
 .coppy-right-box .coppy-right-item{
     display: inline-block;
@@ -5619,7 +5618,7 @@ table.shop_attributes tbody{
 #sticky-wrapper.is-sticky .header-sticky{
     top: 0;
     z-index: 999999999 !important;
-    background: #ffffff;
+    background: #E3E6F3;
 }
 .header-toggle .sticky-wrapper.is-sticky .open-on-top .wrap-toggle-menu.close-menu + .nav.primary,
 .header-toggle .default-toggle .wrap-toggle-menu.close-menu + .nav.primary{

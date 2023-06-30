@@ -13,7 +13,7 @@
 
 				<div class="banner-shop">
 					<a href="#" class="banner-link">
-						<figure><img src="{{ asset('asset/banner/wide_banner_1')}}.jpeg" alt="" style="width:100%; height: 1.5in;"></figure>
+						<figure><img src="{{ asset('asset/banner/wide_banner_2')}}.jpeg" alt="" style="width:100%; height: 1.5in;"></figure>
 					</a>
 				</div>
 
@@ -155,9 +155,9 @@
 				</div><!-- brand widget--> --}}
 
 				<div class="widget mercado-widget filter-widget price-filter">
-					<h2 class="widget-title">Price <span class="text-info">৳{{$min_price}} - ৳{{$max_price}}</span></h2>
+					<h2 class="widget-title">Price : <span class="text-info">৳{{$min_price}} - ৳{{$max_price}}</span></h2>
 					<div class="widget-content" style="padding: 10px 5px 40px 5px;">
-						<div  id="slider" wire:ignore>
+						<div id="slider" wire:ignore>
 
 						</div>
 						

@@ -2,9 +2,9 @@
 
 .mainbar {
     background: #E3E6F3;
-    padding: 15px 80px;
+    padding: 10px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     left: 0;
   }
@@ -12,8 +12,7 @@
   .navbarr {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
   }
   
   .navbarr li{

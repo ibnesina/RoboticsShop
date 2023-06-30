@@ -1,4 +1,3 @@
-<!--main area-->
 <main id="main" class="main-site">
     <style>
         .regprice{
@@ -210,8 +209,8 @@
                                     <i class="fa fa-truck" aria-hidden="true"></i>
                                     <div class="right-content">
                                         <b class="title">Free Shipping</b>
-                                        <span class="subtitle">On Oder Over $99</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
+                                        <span class="subtitle">On Oder Over ৳1000</span>
+                                        <p class="desc">Full free shipping just over ৳1000 order</p>
                                     </div>
                                 </a>
                             </li>
@@ -220,9 +219,9 @@
                                 <a class="link-to-service" href="#">
                                     <i class="fa fa-gift" aria-hidden="true"></i>
                                     <div class="right-content">
-                                        <b class="title">Special Offer</b>
+                                        <b class="title">Special Gifts</b>
                                         <span class="subtitle">Get a gift!</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
+                                        <p class="desc">Get special gifts over ৳3000 order</p>
                                     </div>
                                 </a>
                             </li>
@@ -233,7 +232,7 @@
                                     <div class="right-content">
                                         <b class="title">Order Return</b>
                                         <span class="subtitle">Return within 7 days</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
+                                        <p class="desc">You can return the order within 7 days</p>
                                     </div>
                                 </a>
                             </li>
@@ -264,7 +263,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div><!--end sitebar-->
 
             <div class="single-advance-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -303,4 +301,3 @@
     </div><!--end container-->
 
 </main>
-<!--main area-->

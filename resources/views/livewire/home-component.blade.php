@@ -29,6 +29,72 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        {{-- Features --}}
+        <div>
+            <style>
+                /* Feature */
+                #feature {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                #feature img {
+                    /* width: 180px;
+                    height: 90px; */
+                }
+
+                #feature .fe-box{
+                    width: 235px;
+                    height: 140px;
+                    text-align: center;
+                    margin-top: 20px;
+                    padding: 3px 10px;
+                    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+                    border: 2px solid rgb(72, 193, 240);
+                }
+
+                #feature .fe-box.fe-box.fe-box.fe-box:hover{
+                    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+                }
+
+                #feature .fe-box p{
+                    font-size: 11px;
+                    padding: 9px 8px 6px 8px;
+                    line-height: 1;
+                    color: #fafafa;
+                    font-weight: bold;
+                    background-color: #465b52;
+                    background-size: 240px;
+                }
+            </style>
+
+            <!-- Features -->
+            <section id="feature" class="section-p1">
+                <div class="fe-box">
+                    <img src="asset/fast-delivery.png" alt="">
+                    <p>Delivery within 48 Hours</p>
+                </div>
+                
+                <div class="fe-box">
+                    <img src="asset/free-shiping.jpeg" alt=" ">
+                    <p>FREE SHIP-ON ORDER OVER ৳3000</p>
+                </div>
+                <div class="fe-box">
+                    <img src="asset/24:7.jpeg" alt="" >
+                    <p>24/7 Support</p>
+                </div>
+                <div class="fe-box">
+                    <img src="asset/gift.png" alt="" >
+                    <p style="margin-top: 10px;">GIFT ON ORDER OVER ৳2500</p>
+                </div>
+        
+            </section>
+        </div>
 
         <!--On Sale-->
         @if($sproducts->count()>0)
@@ -140,7 +206,7 @@
                     </div>
                 </div>
             </div>
-        </div>			
+        </div>		
 
     </div>
 

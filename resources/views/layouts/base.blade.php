@@ -4,12 +4,18 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>	
+
+	@if(Route::currentRouteName()=='home')
+		<title>Bigganpur (Best Robotics Shop of Bangladesh)</title>
+	@else
+		<title>{{Route::currentRouteName()}}</title>
+	@endif
+	
     <link rel="shortcut icon" type="image/x-icon" href="asset/tab-icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
+	
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/flexslider.css')}}">
@@ -17,7 +23,10 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mystyles.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/color-01.css')}}">
-
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/all.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
+	
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,31 +50,32 @@
 					<div class="container">
 						<div class="topbar-menu left-menu">
 							<ul>
-								<li class="menu-item" >
-									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+								<li class="menu-item">
+									<li><a href="/user/dashboard"><i class="fas fa-user"> </i> Dashboard | </a></li>
 								</li>
+								<li class="menu-item" style="margin-left: 8px;">
+									<a href="/wishlist"><i class="fas fa-heart"></i> Wishlist |</a>
+								</li>
+								<li class="menu-item" style="margin-left: 8px;">
+									<a href="/cart"><i class="fas fa-cart-shopping"></i> Cart |</a>
+								</li>
+								<li class="menu-item" style="margin-left: 8px;">
+									<a href="/checkout"><i class="fas fa-shopping-bag"></i> Checkout </a>
+								</li>
+								
 							</ul>
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
 								<li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<a title="English" href="#"><span class="img label-before"></span>Language: <b>English</b><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
+										<li class="menu-item" ><a title="bangla" href="#">Bangla</a></li>
 									</ul>
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<a title="Taka (BDT)" href="#">Taka (BDT)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
-										<li class="menu-item" >
-											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
-										</li>
 										<li class="menu-item" >
 											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
 										</li>
@@ -163,46 +173,50 @@
 					</div>
 				</div>
 
-				{{-- <div class="nav-section header-sticky">
-					
-
-					<div class="primary-nav-section">
-						<div class="container">
-							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
-								<li class="menu-item">
-									<a href="/" class="link-term mercado-item-title">Home</a>
-								</li>
-								<li class="menu-item">
-									<a href="/shop" class="link-term mercado-item-title">Shop</a>
-								</li>
-								<li class="menu-item">
-									<a href="/cart" class="link-term mercado-item-title">Cart</a>
-								</li>
-								<li class="menu-item">
-									<a href="/checkout" class="link-term mercado-item-title">Checkout</a>
-								</li>
-								<li class="menu-item">
-									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
-								</li>
-								<li class="menu-item">
-									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
-								</li>																	
-							</ul>
-						</div>
-					</div>
-				</div> --}}
-				<!-- Mainbar -->
-
-				<div class="mainbar">
+				<div class="mainbar header-sticky">
 					<ul class="navbarr">
-						<li><a class="active" href="/">Home</a></li>
-						<li><a href="/shop">Products</a></li>
-						<li><a href="product-service.html">Project Service</a></li>
-						<li><a href="competetions.html">Competetions</a></li>
-						<li><a href="blogs.html">Blogs</a></li>
-						<li><a href="about-us.html">About US</a></li>
-						<li><a href="/contact-us">Contact Us</a></li>
-						<li><a href="/checkout">Checkout</a></li>
+						@if(Route::currentRouteName()=='home')
+							<li><a class="active" href="/">Home</a></li>
+						@else
+							<li><a href="/">Home</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='product.shop')
+							<li><a class="active" href="/shop">Products</a></li>
+						@else
+							<li><a href="/shop">Products</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='projectservice')
+							<li><a class="active" href="/project-service">Project Service</a></li>
+						@else
+							<li><a href="/project-service">Project Service</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='competetions')
+							<li><a class="active" href="/competetions">Competetions</a></li>
+						@else
+							<li><a href="/competetions">Competetions</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='blog')
+							<li><a class="active" href="/blog">Blogs</a></li>
+						@else
+							<li><a href="/blog">Blogs</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='aboutus')
+							<li><a class="active" href="/about-us">About US</a></li>
+						@else
+							<li><a href="/about-us">About US</a></li>
+						@endif
+
+						@if(Route::currentRouteName()=='contact')
+							<li><a class="active" href="/contact-us">Contact Us</a></li>
+						@else
+							<li><a href="/contact-us">Contact Us</a></li>
+						@endif
+						
 					</ul>
 				</div>
 			</div>
@@ -215,57 +229,95 @@
 	<footer id="footer">
 		<div class="wrap-footer-content footer-style-1">
 
-			<div class="wrap-function-info">
-				<div class="container">
-					<ul>
-						<li class="fc-info-item">
-							<i class="fa fa-truck" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Free Shipping</h4>
-								<p class="fc-desc">Free On Oder Over $99</p>
-							</div>
+			{{-- Newsletter --}}
+			<div>
+				<style>
+					/* newsletter */
+					#newsletter {
+						display: flex;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						align-items: center;
+						background-image: url("asset/newsletter.webp");
+						height: 120px;
+						background-repeat: no-repeat;
+						background-position: 20% 30%;
+						background-color: #041e42; 
+					}
 
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-recycle" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Guarantee</h4>
-								<p class="fc-desc">30 Days Money Back</p>
-							</div>
+					#newsletter h4 {
+						font-size: 22px;
+						font-weight: 700;
+						color: #fff;
+						margin-left: 60px;
+					}
+	
+					#newsletter p {
+						font-size: 14px;
+						font-weight: 600;
+						color: #dbebfb;
+						margin-left: 60px;
+					}
 
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Safe Payment</h4>
-								<p class="fc-desc">Safe your online payment</p>
-							</div>
+					#newsletter p span {
+						color: #ffb303;
+						font-weight: bold;
+					}
 
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-life-ring" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Online Suport</h4>
-								<p class="fc-desc">We Have Support 24/7</p>
-							</div>
+					#newsletter .form {
+						display: flex;
+						width: 40%;
+					}
 
-						</li>
-					</ul>
-				</div>
+					#newsletter input {
+						height: 40px;
+						padding: 0 1.25em;
+						font-size: 14px;
+						width: 100%;
+						border: 1px solid transparent;
+						border-radius: 4px;
+						outline: none;
+						background-color: white;
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+
+					}
+
+					#newsletter button{
+						background-color: #088178;
+						color: #fff;
+						white-space: nowrap;
+						padding: 5px;
+						font-weight: 700;
+						font-size: 14px;
+						margin-right: 50px;
+						border-top-right-radius: 4px;
+						border-bottom-right-radius: 4px;
+					}
+				</style>
+				<!-- Newsletter -->
+				<section id="newsletter">
+					<div class="newstest">
+						<h4>Sign Up For Newsletter</h4>
+						<p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+					</div>
+					<div class="form">
+						<input type="text" placeholder="Your email address">
+						<button>Sign Up</button>
+					</div>
+				</section>
 			</div>
-			<!--End function info-->
 
 			<div class="main-footer-content">
 
 				<div class="container">
-
 					<div class="row">
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
-								<h3 class="item-header">Contact Details</h3>
+								<a href="/"><img src="asset/bigganpur-logo.jpeg" alt="" style="height: 60px;"></a>
+								<h3 class="item-header" style="margin-top: 10px;">Contact Details</h3>
 								<div class="item-content">
-									<div class="wrap-contact-detail">
+									<div class="wrap-contact-detail" >
 										<ul>
 											<li>
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -273,7 +325,7 @@
 											</li>
 											<li>
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+												<p class="contact-txt">++8801600111222, ++88017000123456</p>
 											</li>
 											<li>
 												<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -281,34 +333,19 @@
 											</li>											
 										</ul>
 									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Hot Line</h3>
-								<div class="item-content">
-									<div class="wrap-hotline-footer">
-										<span class="desc">Call Us toll Free</span>
-										<b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+									<div class="item-content">
+										<div class="wrap-list-item social-network">
+											<ul>
+												<li><a href="https://www.twitter.com/" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.facebook.com/" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.pinterest.com/" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.instagram.com/" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.vimeo.com/" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
-
-							<div class="wrap-footer-item footer-item-second">
-								<h3 class="item-header">Sign up for newsletter</h3>
-								<div class="item-content">
-									<div class="wrap-newletter-footer">
-										<form action="#" class="frm-newletter" id="frm-newletter">
-											<input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
-											<button class="btn-submit">Subscribe</button>
-										</form>
-									</div>
-								</div>
-							</div>
-
 						</div>
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
@@ -319,97 +356,67 @@
 										<div class="wrap-vertical-nav">
 											<ul>
 												<li class="menu-item"><a href="#" class="link-term">My Account</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Brands</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Gift Certificates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
+												<li class="menu-item"><a href="/user/dashboard" class="link-term">Dashboard</a></li>
+												<li class="menu-item"><a href="/user/orders" class="link-term">Delivery Status</a></li>
+												<li class="menu-item"><a href="/cart" class="link-term">My Cart</a></li>
+												<li class="menu-item"><a href="/wishlist" class="link-term">My Wishlist</a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">Infomation</h3>
+									<h3 class="item-header">About</h3>
 									<div class="item-content">
 										<div class="wrap-vertical-nav">
 											<ul>
-												<li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Returns</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Specials</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Order History</a></li>
+												<li class="menu-item"><a href="/about-us" class="link-term">About Us</a></li>
+												<li class="menu-item"><a href="#" class="link-term">Privacy Policy</a></li>
+												<li class="menu-item"><a href="#" class="link-term">Terms & Conditions</a></li>
+												<li class="menu-item"><a href="/contact-us" class="link-term">Contact Us</a></li>
+												<li class="menu-item"><a href="/blog" class="link-term">Blogs</a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">We Using Safe Payments:</h3>
-								<div class="item-content">
-									<div class="wrap-list-item wrap-gallery">
-										<img src="asset/payment-gateway.png" style="max-width: 260px;">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Social network</h3>
-								<div class="item-content">
-									<div class="wrap-list-item social-network">
-										<ul>
-											<li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
+						</div>	
+						
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Dowload App</h3>
+								<p>From App Store or Google Play</p>
 								<div class="item-content">
 									<div class="wrap-list-item apps-list">
 										<ul>
-											<li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="asset/app-store.png" alt="apple store" width="128" height="36"></figure></a></li>
-											<li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="asset/play-store.png" alt="google play store" width="128" height="36"></figure></a></li>
+											<li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="asset/play-store.png" alt="" width="128" height="36"></figure></a></li>
+											<li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="asset/app-store.png" alt="" width="128" height="36"></figure></a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
+							<div class="wrap-footer-item">
+								<h3 class="item-header">Secured Payment Gateways</h3>
+								<img src="asset/payment-gateway.png" alt="" width="200" height="36">
+							</div>
 						</div>
-
 					</div>
 				</div>
 
 			</div>
 
 			<div class="coppy-right-box" style="margin-top: 15px">
+				<style>
+					.copyright {
+						width: 100%;
+						text-align: center;
+						color: #bbb7b7;
+						padding: 5px;
+					  }
+				</style>
 				<div class="container">
-					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright © 2023 Bigganpur. All rights reserved</p>
-					</div>
-					<div class="coppy-right-item item-right">
-						<div class="wrap-nav horizontal-nav">
-							<ul>
-								<li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>								
-								<li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a></li>
-								<li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms & Conditions</a></li>
-								<li class="menu-item"><a href="return-policy.html" class="link-term">Return Policy</a></li>								
-							</ul>
-						</div>
-					</div>
+					<div class="copyright">
+						<p>© copyright 2023 - www.bigganpur.com</p>
+				  	</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
