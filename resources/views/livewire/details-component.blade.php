@@ -66,14 +66,20 @@
                                 }
                             </style>
                             @php
-                                $avgrating = 0;   
+                                $avgrating = 0;
+                                $cou = 0;   
                             @endphp
                             
                             @foreach($product->orderItems->where('rstatus', 1) as $orderItem)
                                 @php
                                     $avgrating = $avgrating + $orderItem->review->rating;
+                                    $cou++;
                                 @endphp
                             @endforeach
+
+                            @php
+                                $avgrating = $avgrating / $cou;
+                            @endphp
                         
                         
                             @for($i=1; $i<=5; $i++)

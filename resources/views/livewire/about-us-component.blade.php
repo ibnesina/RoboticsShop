@@ -118,8 +118,9 @@
 							<p class="desc">Thousand of Customers visit our Website everyday</p>
 						</div>
 					</div>
+					
 				</div>
-
+				<hr>
 				<div>
 					<style>
 						/* Feature */
@@ -156,7 +157,7 @@
 							line-height: 1;
 							color: #fafafa;
 							font-weight: bold;
-							background-color: #465b52;
+							background-color: #1A2C4D;
 							background-size: 240px;
 						}
 					</style>

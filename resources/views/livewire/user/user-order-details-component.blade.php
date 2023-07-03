@@ -1,7 +1,7 @@
 <div>
     <div class="container" style="padding: 30px 0;">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-14">
                 @if(Session::has('order_message'))
                     <div class="alert alert-success" role="alert">{{Session::get('order_message')}}</div>
                 @endif

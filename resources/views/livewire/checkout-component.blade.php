@@ -17,8 +17,8 @@
 							<h3 class="box-title">Billing Address</h3>
 							<div class="billing-address">
 								<p class="row-in-form">
-									<label for="fname">first name<span>*</span></label>
-									<input type="text" name="fname" value="" placeholder="Your name" wire:model="firstname">
+									<label for="fname">First name<span>*</span></label>
+									<input type="text" name="fname" value="" placeholder="Your first name" wire:model="firstname">
 									@error('firstname')
 										<span class="text-danger">{{$message}}</span>
 									@enderror
@@ -31,7 +31,7 @@
 									@enderror
 								</p>
 								<p class="row-in-form">
-									<label for="email">Email Addreess:</label>
+									<label for="email">Email Addreess:<span>*</span></label>
 									<input type="email" name="email" value="" placeholder="Type your email" wire:model="email">
 									@error('email')
 										<span class="text-danger">{{$message}}</span>
@@ -45,7 +45,7 @@
 									@enderror
 								</p>
 								<p class="row-in-form">
-									<label for="add">Address:</label>
+									<label for="add">Address:<span>*</span></label>
 									<input type="text" name="add" value="" placeholder="Street at apartment number" wire:model="line1">
 									@error('line1')
 										<span class="text-danger">{{$message}}</span>
@@ -77,7 +77,7 @@
 									@enderror
 								</p>
 								<p class="row-in-form">
-									<label for="zip-code">Postcode / ZIP:</label>
+									<label for="zip-code">Postcode / ZIP:<span>*</span></label>
 									<input type="number" name="zip-code" value="" placeholder="Your postal code" wire:model="zipcode">
 									@error('zipcode')
 										<span class="text-danger">{{$message}}</span>

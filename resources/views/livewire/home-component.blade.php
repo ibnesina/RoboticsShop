@@ -9,7 +9,7 @@
          /* Categories */
         .Categories {
             /* padding: 0 20px 0 0; */
-            margin-right: 10px;
+            margin-right: 15px;
             height: 60%;
             width: 20%;
             font-size: 16px;
