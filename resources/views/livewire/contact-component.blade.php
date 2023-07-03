@@ -52,7 +52,7 @@
 						<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 							<div class="contact-box contact-info">
 								<div class="wrap-map">
-									<div class="mercado-google-maps"
+									{{-- <div class="mercado-google-maps"
 										 id="az-google-maps57341d9e51968"
 										 data-hue=""
 										 data-lightness="1"
@@ -69,7 +69,15 @@
 										 data-zoom="16"
 										 data-map-type="ROADMAP"
 										 data-map-height="263">
+									</div> --}}
+									<!--Google map-->
+									<div id="map-container-google-1" class="z-depth-1-half map-container" >
+										{{-- <iframe src="https://www.google.com/maps/place/Khulna+University+of+Engineering+%26+Technology/@22.8934854,89.502516,15.32z/data=!4m6!3m5!1s0x39ff9bda1d0ff6e5:0x123a926908efcd0c!8m2!3d22.9005524!4d89.5023565!16zL20vMGRfMl9x?entry=ttu" frameborder="0"
+										style="border:0" allowfullscreen></iframe> --}}
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11777.453588878836!2d89.50251604564451!3d22.89348537585675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9bda1d0ff6e5%3A0x123a926908efcd0c!2sKhulna%20University%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sbd!4v1688407137675!5m2!1sen!2sbd" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 									</div>
+									
+									<!--Google Maps-->
 								</div>
 								<h2 class="box-title">Contact Detail</h2>
 								<div class="wrap-icon-box">
@@ -78,7 +86,7 @@
 										<i class="fa fa-envelope" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Email</b>
-											<p>Support1@Mercado.com</p>
+											<p>support@admin.com</p>
 										</div>
 									</div>
 
@@ -86,7 +94,7 @@
 										<i class="fa fa-phone" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Phone</b>
-											<p>0123-465-7891</p>
+											<p>+8801600111222</p>
 										</div>
 									</div>
 
@@ -94,7 +102,7 @@
 										<i class="fa fa-map-marker" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Mail Office</b>
-											<p>Sed ut perspiciatis unde omnis<br />Street Name, Los Angeles</p>
+											<p>Amar Ekushe Hall<br />KUET, Khulna</p>
 										</div>
 									</div>
 

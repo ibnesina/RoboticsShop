@@ -30,6 +30,8 @@
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -99,6 +101,9 @@
 													</li>
 													<li class="menu-item">
 														<a href="{{route('admin.homecategories')}}" title="Manage Home Categories">Manage Home Categories</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{route('admin.sale')}}" title="Sale Setting">Sale Setting</a>
 													</li>
 													<li class="menu-item">
 														<a href="{{route('admin.orders')}}" title="Orders">All Orders</a>
@@ -326,11 +331,11 @@
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
 												<p class="contact-txt">Amar Ekushe Hall, KUET, Khulna</p>
 											</li>
-											<li>
+											<li style="margin-top: -10px;">
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">++8801600111222, ++88017000123456</p>
+												<p class="contact-txt">+8801600111222, +8801700012345</p>
 											</li>
-											<li>
+											<li style="margin-top: -10px;">
 												<i class="fa fa-envelope" aria-hidden="true"></i>
 												<p class="contact-txt">contact@bigganpur.com</p>
 											</li>											
@@ -438,6 +443,9 @@
 	
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     @livewireScripts
 

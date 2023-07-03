@@ -10,7 +10,8 @@
                 <ul class="list-cate">
                     {{-- <li class="level-0">Categories</li> --}}
                     @foreach ($categories as $category)
-                        <li class="level-0" data-id="{{$category->id}}"><a href="{{route('product.category', ['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a><hr></li>
+                        <li class="level-0" data-id="{{$category->id}}"><a href="{{route('product.category', ['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a></li>
+                        {{-- <hr> --}}
                     @endforeach
                 </ul>
             </div>
