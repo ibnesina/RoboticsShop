@@ -4,8 +4,8 @@
 
 		<div class="wrap-breadcrumb">
 			<ul>
-				<li class="item-link"><a href="#" class="link">home</a></li>
-				<li class="item-link"><span>Robotics & Electronics</span></li>
+				<li class="item-link"><a href="/" class="link">home</a></li>
+				<li class="item-link"><a href="/shop"><span>Robotics & Electronics</span></a></li>
 			</ul>
 		</div>
 		<div class="row">
@@ -89,7 +89,7 @@
 								<div class="product product-style-3 equal-elem ">
 									<div class="product-thumnail">
 										<a href="{{route('product.details', ['slug'=>$product->slug])}}" title="{{$product->name}}">
-											<figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" alt="{{$product->name}}"></figure>
+											<figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" alt="{{$product->name}}" style="height: 180px;"></figure>
 										</a>
 									</div>
 									<div class="product-info">
@@ -135,6 +135,7 @@
 						<div class="widget-content">
 							<ul class="list-category">
 								@foreach($categories as $category)
+									</li>
 									<li class="category-item">
 										<a href="{{route('product.category', ['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a>
 									</li>
@@ -191,7 +192,6 @@
 										</div>
 									</li>
 								@endforeach
-
 						</ul>
 					</div>
 				</div><!-- brand widget-->
@@ -208,11 +208,11 @@
 	<script>
 		var slider = document.getElementById('slider');
 		noUiSlider.create(slider,{
-			start: [1, 2000],
+			start: [1, 500],
 			connect: true,
 			range :{
 				'min' : 1,
-				'max' : 2000
+				'max' : 500
 			},
 			pips:{
 				mode: 'steps',

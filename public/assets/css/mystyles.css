@@ -50,30 +50,4 @@
   }
 
 
-  /* Banner Slider */
-
-.swiper{
-    width: 1000px;
-    position: relative;
-  }
-  .swiper-slide img{
-    width: 1000px;
-  
-    object-fit: contain;
-  }
-  .swiper .swiper-button-prev,.swiper .swiper-button-next{
-    color: rgb(1, 220, 253);
-  }
-  .swiper .swiper-pagination-bullet-active{
-    background: black;
-    
-  }
-  
-  .swiper-slide-text{
-    position: absolute;
-    top:60% ;
-    text-align: center;
-    align-items: center;
-    margin-left: 250px;
-  
-  }
+ 

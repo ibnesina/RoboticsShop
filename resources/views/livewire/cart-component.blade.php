@@ -31,13 +31,14 @@
                                 <a class="link-to-product" href="{{route('product.details', ['slug' => $item->model->slug])}}">{{$item->model->name}}</a>
                             </div>
                             <div class="price-field produtc-price"><p class="price">৳{{$item->model->regular_price}}</p></div>
-                            <div class="quantity">
+                            <div class="quantity" >
                                 <div class="quantity-input">
                                     <input type="text" name="product-quatity" value="{{$item->qty}}" data-max="120" pattern="[0-9]*" >									
                                     <a class="btn btn-increase" href="#" wire:click.prevent="increaseQuantity('{{$item->rowId}}')"></a>
                                     <a class="btn btn-reduce" href="#" wire:click.prevent="decreaseQuantity('{{$item->rowId}}')"></a>
                                 </div>
                             </div>
+                            
 
                             {{-- <div class="text-center" data-title="Stock">
                                 <div class="detail-qty border radius m-auto">
@@ -78,10 +79,7 @@
                     <a class="btn btn-checkout" href="#" wire:click.prevent="checkout">Checkout</a>
                     <a class="link-to-shop" href="{{route('product.shop')}}">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
-                <div class="update-clear">
-                    <a class="btn btn-clear" href="#">Clear Shopping Cart</a>
-                    <a class="btn btn-update" href="#">Update Shopping Cart</a>
-                </div>
+                
             </div>
 
             @else

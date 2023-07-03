@@ -23,7 +23,7 @@ class ShopComponent extends Component
         $this->pagesize = 12;
 
         $this->min_price = 1;
-        $this->max_price = 2000;
+        $this->max_price = 500;
     }
     public function store($product_id, $product_name, $product_price)
     {
@@ -74,7 +74,7 @@ class ShopComponent extends Component
 
         $categories = Category::all();
 
-        $popular_products = Product::inRandomOrder()->limit(8)->get();
+        $popular_products = Product::inRandomOrder()->limit(7)->get();
 
         if(Auth::check())
         {

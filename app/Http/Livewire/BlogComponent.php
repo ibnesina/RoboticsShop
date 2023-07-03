@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Blogs;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class BlogComponent extends Component
 {
+    use WithPagination;
     public function render()
     {
-        return view('livewire.blog-component')->layout('layouts.base');
+        $blogs = Blogs::all();
+        return view('livewire.blog-component', ['blogs'=>$blogs])->layout('layouts.base');
     }
 }

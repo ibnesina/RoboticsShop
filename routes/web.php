@@ -13,10 +13,12 @@ use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\BlogComponent;
+use App\Http\Livewire\BlogDetailsComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\CompetetionComponent;
+use App\Http\Livewire\CompetetionDetailsComponent;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
@@ -75,6 +77,10 @@ Route::get('/blog', BlogComponent::class)->name('blog');
 Route::get('/competetions', CompetetionComponent::class)->name('competetions');
 
 Route::get('/project-service', ProjectServiceComponent::class)->name('projectservice');
+
+Route::get('/competetion/{slug}', CompetetionDetailsComponent::class)->name('competetion.details');
+
+Route::get('/blog/{slug}', BlogDetailsComponent::class)->name('blog.details');
 
 // Route::middleware([
 //     'auth:sanctum',

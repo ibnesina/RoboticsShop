@@ -1,12 +1,35 @@
 <div>
     <main id="main" class="main-site">
 
+		<style>
+			 #page-header {
+				background-image: url({{asset('asset/porduct-page-banner.png')}});
+				width: 100%;
+				height: 30vh;
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				flex-direction: column;
+				padding: 14px;
+				color: rgb(50, 49, 49);
+			}
+			#page-header h1{
+				font-weight: bold;
+				font-size: 48px;
+			}
+		</style>
+
+		<section id="page-header">
+			<h1>About US</h1>
+		</section>
+
 		<div class="container">
 
 			<div class="wrap-breadcrumb">
 				<ul>
 					<li class="item-link"><a href="/" class="link">Home</a></li>
-					<li class="item-link"><span>Contact us</span></li>
+					<li class="item-link"><a href="/about-us" class="link">About Us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -90,7 +113,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<div class="aboutus-box-score equal-elem ">
-							<b class="box-score-title">2 million</b>
+							<b class="box-score-title">10000</b>
 							<span class="sub-title">User of the site</span>
 							<p class="desc">Thousand of Customers visit our Website everyday</p>
 						</div>

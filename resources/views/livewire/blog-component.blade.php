@@ -49,48 +49,45 @@
         #blogs .blog-details a:hover {
             background-color: #041e42;
         }
+
+        #page-header {
+            background-image: url({{asset('asset/porduct-page-banner.png')}});
+            width: 100%;
+            height: 30vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 14px;
+        }
+
+        #page-header h1{
+			font-weight: bold;
+			font-size: 48px;
+            color: rgb(50, 49, 49);
+		}
+
     </style>
+    
+        <section id="page-header">
+            <h1>Blogs</h1>
+            <p style="font-size: 24px; font-weight: 550; color: rgb(56, 38, 38);">Latest Blogs</p>
+        </section>
+
     <!-- Blogs -->
-    <section id="blogs">
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="asset/blogs/blog2.png" alt="">
+    <section id="blogs">            
+        @foreach ($blogs as $blog)
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="{{asset('asset/blogs')}}/{{$blog->image}}" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>{{$blog->title}}</h4>
+                    <p>{{$blog->short_description}}</p>
+                    <a href="{{route('blog.details', ['slug'=>$blog->slug])}}">READ MORE</a>
+                </div>
             </div>
-            <div class="blog-details">
-                <h4>WHAT IS ARDUINO UNO | A STEP-BY-STEP BEGINNER'S GUIDE PART - 1: HARDWARE OVERVIEW</h4>
-                <p>Arduino UNO is a low-cost, flexible, and easy-to-use programmable microcontroller development board that can be integrated into a variety of electronic and robotic projects.</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="asset/blogs/blog1.png" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>WHAT IS RASPBERRY PI? THE COMPREHENSIVE GUIDE TO RASPBERRY PI</h4>
-                <p>The Raspberry Pi has been designed with the intention of being an affordable tool in developing countries, where it may be used as an educational tool or as a way to access information on running businesses. The low cost of the device makes it possible for people in these countries to have access to computing devices without having to spend large sums of money on them.</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="asset/blogs/blog2.png" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>WHAT IS ARDUINO UNO | A STEP-BY-STEP BEGINNER'S GUIDE PART - 1: HARDWARE OVERVIEW</h4>
-                <p>Arduino UNO is a low-cost, flexible, and easy-to-use programmable microcontroller development board that can be integrated into a variety of electronic and robotic projects.</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="asset/blogs/blog1.png" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>WHAT IS RASPBERRY PI? THE COMPREHENSIVE GUIDE TO RASPBERRY PI</h4>
-                <p>The Raspberry Pi has been designed with the intention of being an affordable tool in developing countries, where it may be used as an educational tool or as a way to access information on running businesses. The low cost of the device makes it possible for people in these countries to have access to computing devices without having to spend large sums of money on them.</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
+        @endforeach
     </section>
 </div>

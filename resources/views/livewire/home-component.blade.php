@@ -1,8 +1,81 @@
 <main id="main">
+
+    <style>
+        .category-banner {
+            padding: 15px 0 0 0;
+            display: flex;
+        }
+
+         /* Categories */
+        .Categories {
+            /* padding: 0 20px 0 0; */
+            margin-right: 10px;
+            height: 60%;
+            width: 20%;
+            font-size: 16px;
+            margin-left: 50px;
+            z-index: 2;
+            background-color: #F7F7F7;
+        }
+
+        /* .Categories ul {
+            margin-left: 10px;
+        }*/
+
+        .Categories ul li {
+            list-style-type: none;
+            list-style: none;
+            font-weight: bold;
+            padding: 0px;
+            cursor: pointer;
+            color: #1A2C4D;
+        } 
+
+        .Categories ul li:hover {
+            color: rgb(72, 193, 240);
+        }
+    </style>
+
+     <!-- Category and Banner --> 
+    <div class="category-banner">
+        <!-- Categories-->
+        <div class="Categories">
+          <ul style="background-color: #1A2C4D; padding: 8px;">
+            <li style="font-size: 20px; color: white; "><i class="fas fa-bars"></i>  Categories</li>
+          </ul>
+          <ul style="padding: 0 10px;">
+            @foreach ($side_categories as $side_category)
+                <a href="{{route('product.category', ['category_slug'=>$side_category->slug])}}"><li style="margin-top: -9px;">{{$side_category->name}}</li></a>
+                <hr style="margin-top: -3px; border-width: 2px;">
+            @endforeach
+          </ul>
+        </div>
+        <div class="container" style="margin-top: -10px;">
+            <div class="wrap-main-slide" style="max-width: 850px;">
+                <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
+                    <div class="item-slide">
+                        <img src="{{asset('asset/banner/banner_01.png')}}" alt="" class="img-slide" >
+                    </div>
+                    <div class="item-slide">
+                        <img src="{{asset('asset/banner/banner_02.jpeg')}}" alt="" class="img-slide">
+                    </div>
+                    <div class="item-slide">
+                        <img src="{{asset('asset/banner/banner_03.jpeg')}}" alt="" class="img-slide">
+                    </div>
+                </div>
+            </div>
+  
+        </div> 
+    </div>  
+  
+        <!-- Banner Slider -->
+        
+        </div>
+
     <div class="container">
 
         <!--MAIN SLIDE-->
-        <div class="wrap-main-slide">
+        {{-- <div class="wrap-main-slide">
             <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
                 <div class="item-slide">
                     <img src="{{asset('asset/banner/banner_01.png')}}" alt="" class="img-slide">
@@ -14,7 +87,7 @@
                     <img src="{{asset('asset/banner/banner_03.jpeg')}}" alt="" class="img-slide">
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!--BANNER-->
         <div class="wrap-banner style-twin-default">
@@ -68,7 +141,7 @@
                     line-height: 1;
                     color: #fafafa;
                     font-weight: bold;
-                    background-color: #465b52;
+                    background-color: #1A2C4D;
                     background-size: 240px;
                 }
             </style>
@@ -107,8 +180,9 @@
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="{{route('product.details', ['slug'=>$product->slug])}}" title="{{$product->name}}">
-                                    <figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" width="800" height="800" alt="{{$product->name}}"></figure>
+                                    <figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" style="height: 220px;" alt="{{$product->name}}"></figure>
                                 </a>
+
                                 <div class="group-flash">
                                     <span class="flash-item sale-label">sale</span>
                                 </div>
@@ -129,7 +203,7 @@
             <h3 class="title-box">Latest Products</h3>
             <div class="wrap-top-banner">
                 <a href="#" class="link-banner banner-effect-2">
-                    <figure><img src="{{asset('asset/banner/wide_banner_2.jpeg')}}" width="1170" height="100" alt=""></figure>
+                    <figure><img src="{{asset('asset/banner/wide_banner_2.jpeg')}}" style="height: 150px; width: 1170px;" alt=""></figure>
                 </a>
             </div>
             <div class="wrap-products">
@@ -141,14 +215,14 @@
                                     <div class="product product-style-2 equal-elem ">
                                         <div class="product-thumnail">
                                             <a href="{{route('product.details', ['slug'=>$product->slug])}}" title="{{$product->name}}">
-                                                <figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" width="800" height="800" alt="{{$product->name}}"></figure>
+                                                <figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" style="height: 220px;" alt="{{$product->name}}"></figure>
                                             </a>
                                             <div class="group-flash">
                                                 <span class="flash-item new-label">new</span>
                                             </div>
-                                            <div class="wrap-btn">
+                                            {{-- <div class="wrap-btn">
                                                 <a href="#" class="function-link">quick view</a>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="product-info">
                                             <a href="{{route('product.details', ['slug'=>$product->slug])}}" class="product-name"><span>{{$product->name}}</span></a>
@@ -168,7 +242,7 @@
             <h3 class="title-box">Product Categories</h3>
             <div class="wrap-top-banner">
                 <a href="#" class="link-banner banner-effect-2">
-                    <figure><img src="{{asset('asset/banner/wide_banner_1.jpeg')}}" width="1170" height="240" alt=""></figure>
+                    <figure><img src="{{asset('asset/banner/wide_banner_1.jpeg')}}" style="height: 150px; width: 1170px;" alt=""></figure>
                 </a>
             </div>
             <div class="wrap-products">
@@ -191,7 +265,7 @@
                                         <div class="product product-style-2 equal-elem ">
                                             <div class="product-thumnail">
                                                 <a href="{{route('product.details', ['slug'=>$c_product->slug])}}" title="{{$c_product->name}}">
-                                                    <figure><img src="{{ asset('asset/product_image')}}/{{$c_product->image}}" width="800" height="800" alt="{{$product->name}}"></figure>
+                                                    <figure><img src="{{ asset('asset/product_image')}}/{{$c_product->image}}" style="height: 220px;" alt="{{$product->name}}"></figure>
                                                 </a>
                                             </div>
                                             <div class="product-info">

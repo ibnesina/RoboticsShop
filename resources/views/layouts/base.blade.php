@@ -175,6 +175,9 @@
 
 				<div class="mainbar header-sticky">
 					<ul class="navbarr">
+						<li>
+							@livewire('nav-all-categories-component')
+						</li>
 						@if(Route::currentRouteName()=='home')
 							<li><a class="active" href="/">Home</a></li>
 						@else
@@ -188,9 +191,9 @@
 						@endif
 
 						@if(Route::currentRouteName()=='projectservice')
-							<li><a class="active" href="/project-service">Project Service</a></li>
+							<li><a class="active" href="/project-service">Project Services</a></li>
 						@else
-							<li><a href="/project-service">Project Service</a></li>
+							<li><a href="/project-service">Project Services</a></li>
 						@endif
 
 						@if(Route::currentRouteName()=='competetions')
@@ -206,9 +209,9 @@
 						@endif
 
 						@if(Route::currentRouteName()=='aboutus')
-							<li><a class="active" href="/about-us">About US</a></li>
+							<li><a class="active" href="/about-us">About Us</a></li>
 						@else
-							<li><a href="/about-us">About US</a></li>
+							<li><a href="/about-us">About Us</a></li>
 						@endif
 
 						@if(Route::currentRouteName()=='contact')

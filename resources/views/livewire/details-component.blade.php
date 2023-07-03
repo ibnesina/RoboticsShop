@@ -1,3 +1,4 @@
+<div>
 <main id="main" class="main-site">
     <style>
         .regprice{
@@ -125,7 +126,7 @@
                             <a href="#review" class="tab-control-item">Reviews</a>
                         </div>
                         <div class="tab-contents">
-                            <div class="tab-content-item active" id="description">
+                            <div class="tab-content-item active" id="description" style="text-align: justify;">
                                 {{$product->description}}
                             </div>
                             {{-- <div class="tab-content-item " id="add_infomation">
@@ -301,3 +302,4 @@
     </div><!--end container-->
 
 </main>
+</div>

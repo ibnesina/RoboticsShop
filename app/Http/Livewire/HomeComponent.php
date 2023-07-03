@@ -22,13 +22,15 @@ class HomeComponent extends Component
         $categories = Category::whereIn('id', $cats)->get();
         $no_of_products = $category->no_of_products;
 
+        $side_categories = Category::all();
+
         $sproducts = Product::where('sale_price', '>', 0)->inRandomOrder()->get()->take(8);
         if(Auth::check())
         {
             Cart::instance('cart')->restore(Auth::user()->email);
             Cart::instance('wishlist')->restore(Auth::user()->email);
         }
-        return view('livewire.home-component', ['popular_products' => $popular_products, 'lproducts' => $lproducts, 'categories' => $categories, 'no_of_products' => $no_of_products, 'sproducts' => $sproducts])->layout("layouts.base");
+        return view('livewire.home-component', ['popular_products' => $popular_products, 'lproducts' => $lproducts, 'categories' => $categories, 'no_of_products' => $no_of_products, 'sproducts' => $sproducts, 'side_categories'=>$side_categories])->layout("layouts.base");
         // 
     }
 }
