@@ -198,6 +198,42 @@
             </div>
         @endif
 
+        
+        <!--Featured Products-->
+        <div class="wrap-show-advance-info-box style-1">
+            <h3 class="title-box">Featured Products</h3>
+            
+            <div class="wrap-products">
+                <div class="wrap-product-tab tab-style-1">						
+                    <div class="tab-contents">
+                        <div class="tab-content-item active" id="digital_1a">
+                            <div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+                                @foreach ($fproducts as $product)
+                                    <div class="product product-style-2 equal-elem ">
+                                        <div class="product-thumnail">
+                                            <a href="{{route('product.details', ['slug'=>$product->slug])}}" title="{{$product->name}}">
+                                                <figure><img src="{{ asset('asset/product_image')}}/{{$product->image}}" style="height: 220px;" alt="{{$product->name}}"></figure>
+                                            </a>
+                                            <div class="group-flash">
+                                                <span class="flash-item new-label">featured</span>
+                                            </div>
+                                            {{-- <div class="wrap-btn">
+                                                <a href="#" class="function-link">quick view</a>
+                                            </div> --}}
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="{{route('product.details', ['slug'=>$product->slug])}}" class="product-name"><span>{{$product->name}}</span></a>
+                                            <div class="wrap-price"><span class="product-price">৳{{$product->regular_price}}</span></div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>							
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--Latest Products-->
         <div class="wrap-show-advance-info-box style-1">
             <h3 class="title-box">Latest Products</h3>
@@ -281,6 +317,79 @@
                 </div>
             </div>
         </div>		
+
+        <div class="our-team-info">
+            <h4 class="title-box">বিজ্ঞানপুর যাদের সার্ভ করেছে</h4>
+            <div class="our-staff">
+                <div 
+                    class="slide-carousel owl-carousel style-nav-1 equal-container" 
+                    data-items="5" 
+                    data-loop="false" 
+                    data-nav="true" 
+                    data-dots="false"
+                    data-margin="30"
+                    data-responsive='{"0":{"items":"1"},"480":{"items":"3"},"768":{"items":"4"},"992":{"items":"4"},"1200":{"items":"4"}}' >
+
+                    <div class="team-member equal-elem">
+                        <div class="media">
+                            <a href="#" title="Md. Ibne Sina">
+                                <figure><img src="asset/uni_logo/kuet.png" alt="Md. Ibne Sina" style="height: 220px;"></figure>
+                            </a>
+                        </div>
+                        <div class="info" style="text-align: center;">
+                            <b class="name">KUET</b>
+                        </div>
+                    </div>
+
+                    <div class="team-member equal-elem">
+                        <div class="media">
+                            <a href="#" title="Md. Ibne Sina">
+                                <figure><img src="asset/uni_logo/buet.png" alt="Md. Ibne Sina" style="height: 220px;"></figure>
+                            </a>
+                        </div>
+                        <div class="info" style="text-align: center;">
+                            <b class="name">BUET</b>
+                        </div>
+                    </div>
+
+                    <div class="team-member equal-elem">
+                        <div class="media">
+                            <a href="#" title="Md. Ibne Sina">
+                                <figure><img src="asset/uni_logo/kuetr.png" alt="Md. Ibne Sina" style="height: 220px;"></figure>
+                            </a>
+                        </div>
+                        <div class="info" style="text-align: center;">
+                            <b class="name">KUET Mars Rover</b>
+                        </div>
+                    </div>
+
+                    <div class="team-member equal-elem">
+                        <div class="media">
+                            <a href="#" title="Md. Ibne Sina">
+                                <figure><img src="asset/uni_logo/buetr.png" alt="Md. Ibne Sina" style="height: 220px;"></figure>
+                            </a>
+                        </div>
+                        <div class="info" style="text-align: center;">
+                            <b class="name">BUET Robotics Society</b>
+                        </div>
+                    </div>
+
+                    <div class="team-member equal-elem">
+                        <div class="media">
+                            <a href="#" title="Md. Ibne Sina">
+                                <figure><img src="asset/uni_logo/ruet.png" alt="Md. Ibne Sina" style="height: 220px;"></figure>
+                            </a>
+                        </div>
+                        <div class="info" style="text-align: center;">
+                            <b class="name">RUET</b>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 

@@ -74,8 +74,8 @@ class ShopComponent extends Component
 
         $categories = Category::all();
 
-        $popular_products = Product::inRandomOrder()->limit(7)->get();
-
+        /*$popular_products = Product::inRandomOrder()->limit(7)->get();*/
+        $popular_products = Product::where('featured', 1)->limit(7)->get();
         if(Auth::check())
         {
             Cart::instance('cart')->store(Auth::user()->email);

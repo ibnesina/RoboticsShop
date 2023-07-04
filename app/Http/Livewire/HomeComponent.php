@@ -32,8 +32,10 @@ class HomeComponent extends Component
             Cart::instance('wishlist')->restore(Auth::user()->email);
         }
 
+        $fproducts = Product::where('featured', 1)->get();
+
         $sale = Sale::find(1);
-        return view('livewire.home-component', ['popular_products' => $popular_products, 'lproducts' => $lproducts, 'categories' => $categories, 'no_of_products' => $no_of_products, 'sproducts' => $sproducts, 'side_categories'=>$side_categories, 'sale'=>$sale])->layout("layouts.base");
+        return view('livewire.home-component', ['popular_products' => $popular_products, 'lproducts' => $lproducts, 'categories' => $categories, 'no_of_products' => $no_of_products, 'sproducts' => $sproducts, 'side_categories'=>$side_categories, 'sale'=>$sale, 'fproducts'=>$fproducts])->layout("layouts.base");
         // 
     }
 }
